@@ -1,0 +1,9 @@
+{
+  "captured": "2026-11-20 live check (read-only)",
+  "status": 400,
+  "headers": {},
+  "body": {
+    "code": 400213,
+    "msg": "Invalid Date/Timestamp Format"
+  }
+}

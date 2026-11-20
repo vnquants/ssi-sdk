@@ -1,0 +1,150 @@
+{
+  "captured": "2026-11-20 live check (read-only)",
+  "status": 200,
+  "headers": {
+    "X-RATELIMIT-LIMIT": "20",
+    "X-RATELIMIT-REMAINING": "17"
+  },
+  "body": [
+    {
+      "board": "HOSE",
+      "index": "VNALL",
+      "indexName": "VNALL"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNDIVIDEND ",
+      "indexName": "VNDIVIDEND "
+    },
+    {
+      "board": "HOSE",
+      "index": "VNCONS",
+      "indexName": "VNCONS"
+    },
+    {
+      "board": "HOSE",
+      "index": "VN30",
+      "indexName": "VN30"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNCOND",
+      "indexName": "VNCOND"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNENE",
+      "indexName": "VNENE"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNSI",
+      "indexName": "VNSI"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNFIN",
+      "indexName": "VNFIN"
+    },
+    {
+      "board": "HOSE",
+      "index": "VN50GROWTH",
+      "indexName": "VN50GROWTH"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNSHINE",
+      "indexName": "VNSHINE"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNDIAMOND",
+      "indexName": "VNDIAMOND"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNHEAL",
+      "indexName": "VNHEAL"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNUTI",
+      "indexName": "VNUTI"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNPRIVGRO",
+      "indexName": "VNPRIVGRO"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNMID",
+      "indexName": "VNMID"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNMITECH",
+      "indexName": "VNMITECH"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNX50",
+      "indexName": "VNX50"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNREAL",
+      "indexName": "VNREAL"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNFINLEAD",
+      "indexName": "VNFINLEAD"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNINDEX",
+      "indexName": "VNINDEX"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNMAT",
+      "indexName": "VNMAT"
+    },
+    {
+      "board": "HOSE",
+      "index": "VN100",
+      "indexName": "VN100"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNIND",
+      "indexName": "VNIND"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNFINSELECT",
+      "indexName": "VNFINSELECT"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNXALL",
+      "indexName": "VNXALL"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNSML",
+      "indexName": "VNSML"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNDIVIDEND",
+      "indexName": "VNDIVIDEND"
+    },
+    {
+      "board": "HOSE",
+      "index": "VNIT",
+      "indexName": "VNIT"
+    }
+  ]
+}

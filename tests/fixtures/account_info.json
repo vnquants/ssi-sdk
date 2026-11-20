@@ -1,0 +1,23 @@
+{
+  "captured": "2026-11-20 live check (read-only)",
+  "redacted": "account numbers replaced",
+  "status": 200,
+  "headers": {
+    "X-RATELIMIT-LIMIT": "10",
+    "X-RATELIMIT-REMAINING": "9"
+  },
+  "body": [
+    {
+      "accountNo": "003C000001",
+      "accountType": "Cash"
+    },
+    {
+      "accountNo": "003C000006",
+      "accountType": "Margin"
+    },
+    {
+      "accountNo": "003C000008",
+      "accountType": "Derivative"
+    }
+  ]
+}

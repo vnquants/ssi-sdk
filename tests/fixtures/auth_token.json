@@ -1,0 +1,16 @@
+{
+  "captured": "2026-11-20 live check (read-only)",
+  "redacted": "token strings replaced; lifetimes as observed (access 900 s, refresh 28 800 s from issue)",
+  "status": 200,
+  "headers": {
+    "X-RATELIMIT-LIMIT": "200",
+    "X-RATELIMIT-REMAINING": "199"
+  },
+  "body": {
+    "tokenType": "Bearer",
+    "accessToken": "eyJ.redacted.access",
+    "expiresAt": 1795111487,
+    "refreshToken": "redacted-refresh",
+    "refreshExpiresAt": 1795139387
+  }
+}

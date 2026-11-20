@@ -1,0 +1,101 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  merge_group:
+    types: [checks_requested]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_NET_RETRY: "10"
+  CARGO_TERM_COLOR: always
+  RUST_TOOLCHAIN: "1.100.0"
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  quality:
+    name: Quality gates
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        # actions/checkout v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+
+      - name: Install pinned Rust toolchain
+        run: |
+          rustup toolchain install "$RUST_TOOLCHAIN" \
+            --profile minimal \
+            --component clippy,rustfmt
+
+      - name: Check formatting
+        run: cargo +${RUST_TOOLCHAIN} fmt --all -- --check
+
+      - name: Run Clippy (feature matrix)
+        run: |
+          cargo +${RUST_TOOLCHAIN} clippy --no-default-features --all-targets --locked -- -D warnings
+          cargo +${RUST_TOOLCHAIN} clippy --no-default-features --features data --all-targets --locked -- -D warnings
+          cargo +${RUST_TOOLCHAIN} clippy --no-default-features --features trading --all-targets --locked -- -D warnings
+          cargo +${RUST_TOOLCHAIN} clippy --all-targets --all-features --locked -- -D warnings
+
+      - name: Build documentation
+        env:
+          RUSTDOCFLAGS: "-D warnings"
+        run: cargo +${RUST_TOOLCHAIN} doc --all-features --no-deps --locked
+
+  test:
+    name: Tests (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - name: Check out repository
+        # actions/checkout v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+
+      - name: Install pinned Rust toolchain
+        run: rustup toolchain install "$RUST_TOOLCHAIN" --profile minimal
+
+      - name: Run tests (feature matrix)
+        run: |
+          cargo +${RUST_TOOLCHAIN} test --no-default-features --all-targets --locked
+          cargo +${RUST_TOOLCHAIN} test --no-default-features --features data --all-targets --locked
+          cargo +${RUST_TOOLCHAIN} test --no-default-features --features trading --all-targets --locked
+          cargo +${RUST_TOOLCHAIN} test --all-targets --all-features --locked
+
+  package:
+    name: Package ssi-sdk
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        # actions/checkout v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+
+      - name: Install pinned Rust toolchain
+        run: rustup toolchain install "$RUST_TOOLCHAIN" --profile minimal
+
+      - name: Verify publishable package
+        run: cargo +${RUST_TOOLCHAIN} package --locked

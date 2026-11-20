@@ -1,0 +1,178 @@
+[package]
+name = "ssi-sdk"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.100"
+license = "MIT"
+repository = "https://github.com/vnquants/ssi-sdk"
+documentation = "https://docs.rs/ssi-sdk"
+readme = "README.md"
+description = "Typed async Rust SDK for SSI FastConnect V3: market data REST & WebSocket (`data`) and OTP/Smart OTP trading, orders, FCO & Trading WS (`trading`)"
+keywords = ["ssi", "market-data", "trading", "vietnam", "websocket"]
+categories = ["api-bindings", "finance"]
+publish = ["crates-io"]
+include = ["/src", "/docs", "/examples", "/tests", "/README.md", "/CHANGELOG.md", "/LICENSE"]
+
+[package.metadata]
+authors = ["Dat Nguyen <dat.nguyen@bitbytelab.io>"]
+
+[features]
+default = ["data"]
+# Market data REST (/api/v3/data/*) and DATA WebSocket stream.
+data = []
+# OTP / Smart OTP auth, RSA signing, order / batch / FCO execution, TRADING event stream and Trading WS RPC.
+trading = [
+    "dep:base64",
+    "dep:hex",
+    "dep:quick-xml",
+    "dep:rand",
+    "dep:rsa",
+    "dep:sha2",
+    "dep:zeroize",
+]
+
+[dependencies]
+base64 = { version = "0.22.1", optional = true }
+chrono = { version = "0.4.45", default-features = false, features = ["clock", "serde", "std"] }
+chrono-tz = "0.10.4"
+fastrand = "2.5.0"
+futures-util = { version = "0.3", features = ["sink"] }
+hex = { version = "0.4.3", optional = true }
+log = "0.4.35"
+quick-xml = { version = "0.42", features = ["serialize"], optional = true }
+rand = { version = "0.8", optional = true }
+reqwest = { version = "0.13.5", default-features = false, features = ["json", "query", "rustls"] }
+rsa = { version = "0.9.10", features = ["sha2"], optional = true }
+rust_decimal = { version = "1.43.0", features = ["serde"] }
+secrecy = "0.10.3"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["raw_value"] }
+sha2 = { version = "0.10", optional = true }
+thiserror = "2"
+tokio = { version = "1", features = ["macros", "net", "rt-multi-thread", "signal", "sync", "time"] }
+tokio-tungstenite = { version = "0.30", features = ["rustls-tls-webpki-roots"] }
+tokio-util = "0.7.20"
+tracing = "0.1.44"
+url = "2"
+zeroize = { version = "1", optional = true }
+
+[dev-dependencies]
+dotenvy = "0.15"
+rust_decimal = { version = "1.43.0", features = ["serde", "macros"] }
+tokio = { version = "1", features = ["macros", "net", "rt-multi-thread", "signal", "sync", "time", "test-util"] }
+tracing-subscriber = { version = "0.3.23", features = ["env-filter", "fmt"] }
+wiremock = "0.6"
+
+[[example]]
+name = "token_info"
+required-features = ["data"]
+
+[[example]]
+name = "ohlc"
+required-features = ["data"]
+
+[[example]]
+name = "stream"
+required-features = ["data"]
+
+[[example]]
+name = "live_check"
+required-features = ["data"]
+
+[[example]]
+name = "auth_otp"
+required-features = ["trading"]
+
+[[example]]
+name = "account_overview"
+required-features = ["trading"]
+
+[[example]]
+name = "trading_stream"
+required-features = ["trading"]
+
+[[test]]
+name = "data_rest"
+required-features = ["data"]
+
+[[test]]
+name = "data_stream"
+required-features = ["data"]
+
+[[test]]
+name = "data_stream_capture"
+required-features = ["data"]
+
+[[test]]
+name = "example_support"
+required-features = ["data"]
+
+[[test]]
+name = "trading_auth"
+required-features = ["trading"]
+
+[[test]]
+name = "trading_rest"
+required-features = ["trading"]
+
+[[test]]
+name = "trading_stream"
+required-features = ["trading"]
+
+[[test]]
+name = "trading_ws"
+required-features = ["trading"]
+
+[[test]]
+name = "trace_redaction"
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+missing_docs = "warn"
+missing_debug_implementations = "warn"
+unreachable_pub = "warn"
+unused_must_use = "deny"
+elided_lifetimes_in_paths = "warn"
+non_ascii_idents = "deny"
+trivial_numeric_casts = "warn"
+unused_lifetimes = "warn"
+single_use_lifetimes = "warn"
+
+[lints.clippy]
+all = { level = "deny", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+nursery = { level = "warn", priority = -1 }
+cargo = { level = "warn", priority = -1 }
+undocumented_unsafe_blocks = "deny"
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+todo = "deny"
+unimplemented = "deny"
+unreachable = "deny"
+indexing_slicing = "deny"
+mem_forget = "deny"
+dbg_macro = "warn"
+print_stderr = "warn"
+print_stdout = "warn"
+module_name_repetitions = "allow"
+must_use_candidate = "allow"
+missing_errors_doc = "allow"
+mod_module_files = "allow"
+multiple_crate_versions = "allow"
+redundant_pub_crate = "allow"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+strip = "symbols"
+panic = "abort"
+debug = "line-tables-only"
+
+[profile.dev]
+opt-level = 0
+debug = true
+incremental = true
+codegen-units = 256
+split-debuginfo = "unpacked"

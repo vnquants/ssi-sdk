@@ -1,0 +1,67 @@
+{
+  "captured": "2026-11-20 live check (read-only)",
+  "status": 200,
+  "headers": {
+    "X-RATELIMIT-LIMIT": "20",
+    "X-RATELIMIT-REMAINING": "18"
+  },
+  "body": {
+    "code": 200,
+    "data": [
+      {
+        "close": "85907.332",
+        "high": "86983.415",
+        "low": "85369.29",
+        "open": "86804.068",
+        "symbol": "FPT",
+        "tradingDate": "2025/12/31",
+        "value": "264817941623.2",
+        "volume": "3082600"
+      },
+      {
+        "close": "86535.047",
+        "high": "86624.721",
+        "low": "84562.227",
+        "open": "84741.575",
+        "symbol": "FPT",
+        "tradingDate": "2025/12/30",
+        "value": "629213633746.4",
+        "volume": "7271200"
+      },
+      {
+        "close": "84562.227",
+        "high": "85100.269",
+        "low": "82948.102",
+        "open": "82948.102",
+        "symbol": "FPT",
+        "tradingDate": "2025/12/29",
+        "value": "532818136104.3",
+        "volume": "6300900"
+      },
+      {
+        "close": "82948.102",
+        "high": "83396.47",
+        "low": "81602.998",
+        "open": "83127.449",
+        "symbol": "FPT",
+        "tradingDate": "2025/12/26",
+        "value": "548486029664.8",
+        "volume": "6612400"
+      },
+      {
+        "close": "83396.47",
+        "high": "85010.596",
+        "low": "83396.47",
+        "open": "83934.512",
+        "symbol": "FPT",
+        "tradingDate": "2025/12/25",
+        "value": "380721564844",
+        "volume": "4565200"
+      }
+    ],
+    "msg": "",
+    "pageIndex": 1,
+    "pageSize": 1000
+  },
+  "note": "data trimmed from 249 to 5 rows"
+}

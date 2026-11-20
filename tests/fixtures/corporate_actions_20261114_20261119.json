@@ -1,0 +1,91 @@
+{
+  "captured": "2026-11-20 live check (read-only)",
+  "status": 200,
+  "headers": {
+    "X-RATELIMIT-LIMIT": "1",
+    "X-RATELIMIT-REMAINING": "0"
+  },
+  "body": {
+    "code": 200,
+    "data": [
+      {
+        "eventTitle": "PTH - Thông báo đăng ký giao dịch nội bộ/CĐL",
+        "exchange": "",
+        "exrightDate": "",
+        "issueDate": "2026/11/19",
+        "ratio": "",
+        "recordDate": "",
+        "symbol": "PTH"
+      },
+      {
+        "eventTitle": "S4A - Trả cổ tức Đợt 1 năm 2026 bằng tiền 1000 đồng/cổ phiếu",
+        "exchange": "",
+        "exrightDate": "2026/11/19",
+        "issueDate": "2026/12/08",
+        "ratio": "0.9355",
+        "recordDate": "2026/11/20",
+        "symbol": "S4A"
+      },
+      {
+        "eventTitle": "S4A - Trả cổ tức Đợt 2 năm 2026 bằng tiền 1000 đồng/cổ phiếu",
+        "exchange": "",
+        "exrightDate": "2026/11/19",
+        "issueDate": "2027/01/20",
+        "ratio": "0.9355",
+        "recordDate": "2026/11/20",
+        "symbol": "S4A"
+      },
+      {
+        "eventTitle": "PTH - Kết quả giao dịch nội bộ/CĐL",
+        "exchange": "",
+        "exrightDate": "",
+        "issueDate": "2026/11/19",
+        "ratio": "",
+        "recordDate": "",
+        "symbol": "PTH"
+      },
+      {
+        "eventTitle": "VLB - Trả cổ tức Đợt 1 năm 2026 bằng tiền 2500 đồng/cổ phiếu",
+        "exchange": "",
+        "exrightDate": "2026/11/19",
+        "issueDate": "2026/12/17",
+        "ratio": "0.9529",
+        "recordDate": "2026/11/20",
+        "symbol": "VLB"
+      },
+      {
+        "eventTitle": "SZB - Trả cổ tức Đợt 1 năm 2026 bằng tiền 1000 đồng/cổ phiếu",
+        "exchange": "",
+        "exrightDate": "2026/11/19",
+        "issueDate": "2026/12/22",
+        "ratio": "0.9783",
+        "recordDate": "2026/11/20",
+        "symbol": "SZB"
+      },
+      {
+        "eventTitle": "PMW - Trả cổ tức Đợt 1 năm 2026 bằng tiền 1000 đồng/cổ phiếu",
+        "exchange": "",
+        "exrightDate": "2026/11/19",
+        "issueDate": "2026/12/16",
+        "ratio": "0.9684",
+        "recordDate": "2026/11/20",
+        "symbol": "PMW"
+      },
+      {
+        "eventTitle": "SIP - Trả cổ tức Đợt 1 năm 2026 bằng tiền 4500 đồng/cổ phiếu",
+        "exchange": "",
+        "exrightDate": "2026/11/19",
+        "issueDate": "2026/12/11",
+        "ratio": "0.9091",
+        "recordDate": "2026/11/20",
+        "symbol": "SIP"
+      }
+    ],
+    "itemsCount": 76,
+    "msg": "",
+    "pageIndex": 1,
+    "pageSize": 100,
+    "pagesCount": 1
+  },
+  "note": "data trimmed from 76 to 8 rows"
+}

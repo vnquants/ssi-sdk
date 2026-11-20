@@ -1,0 +1,11 @@
+{
+  "captured": "2026-11-20 live check (read-only)",
+  "redacted": "account numbers replaced, amounts zeroed",
+  "status": 200,
+  "headers": {},
+  "body": {
+    "derivative": null,
+    "equity": [],
+    "receivedTime": 1795110482382
+  }
+}

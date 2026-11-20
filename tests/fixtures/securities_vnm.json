@@ -1,0 +1,31 @@
+{
+  "captured": "2026-11-20 live check (read-only)",
+  "status": 200,
+  "headers": {
+    "X-RATELIMIT-LIMIT": "20",
+    "X-RATELIMIT-REMAINING": "19"
+  },
+  "body": [
+    {
+      "board": "HOSE",
+      "cwExecutionRatio": "0",
+      "cwExercisePrice": "0",
+      "cwUnderlyingSymbol": null,
+      "firstTradingDate": "",
+      "iIndex": null,
+      "iNav": null,
+      "icbCode": "3577",
+      "icbName": "Thực phẩm",
+      "lastTradingDate": "",
+      "listedShare": "2089955445",
+      "lotSize": "100",
+      "maturityDate": "",
+      "openInterest": null,
+      "settlementPrice": null,
+      "stockType": "Stock",
+      "symbol": "VNM",
+      "symbolNameEn": "Vietnam Dairy Products Joint Stock Company",
+      "symbolNameVi": "Công ty Cổ phần Sữa Việt Nam"
+    }
+  ]
+}

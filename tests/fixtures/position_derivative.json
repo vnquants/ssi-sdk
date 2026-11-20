@@ -1,0 +1,15 @@
+{
+  "captured": "2026-11-20 live check (read-only)",
+  "redacted": "account numbers replaced, amounts zeroed",
+  "status": 200,
+  "headers": {},
+  "body": {
+    "derivative": {
+      "accountNo": "003C000008",
+      "derClosePositions": [],
+      "derOpenPositions": []
+    },
+    "equity": null,
+    "receivedTime": 1795110483486
+  }
+}

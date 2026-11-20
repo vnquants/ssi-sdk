@@ -1,0 +1,30 @@
+{
+  "captured": "2026-11-20 live check (read-only)",
+  "redacted": "account numbers replaced, amounts zeroed",
+  "status": 200,
+  "headers": {},
+  "body": {
+    "derivative": {
+      "accountBalance": "0",
+      "accountNo": "003C000008",
+      "cashSSI": "0",
+      "cashVSDC": "0",
+      "commission": "0",
+      "deliveryAmount": "0",
+      "extInterest": "0",
+      "fee": "0",
+      "floatingPL": "0",
+      "interest": "0",
+      "loan": "0",
+      "totalPL": "0",
+      "tradingPL": "0",
+      "validNonCashSSI": "0",
+      "validNonCashVSDC": "0",
+      "withdrawable": "0",
+      "withdrawableSSI": "0",
+      "withdrawableVSDC": "0"
+    },
+    "equity": null,
+    "receivedTime": 1795110483634
+  }
+}

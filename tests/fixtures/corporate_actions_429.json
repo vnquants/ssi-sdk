@@ -1,0 +1,13 @@
+{
+  "captured": "2026-11-20 live check (read-only)",
+  "status": 429,
+  "headers": {
+    "X-RATELIMIT-LIMIT": "1",
+    "X-RATELIMIT-REMAINING": "0",
+    "Retry-After": "1"
+  },
+  "body": {
+    "code": 429,
+    "msg": "Too many requests. Please try again later."
+  }
+}

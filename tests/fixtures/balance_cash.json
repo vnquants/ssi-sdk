@@ -1,0 +1,31 @@
+{
+  "captured": "2026-11-20 live check (read-only)",
+  "redacted": "account numbers replaced, amounts zeroed",
+  "status": 200,
+  "headers": {},
+  "body": {
+    "derivative": null,
+    "equity": {
+      "accountBalance": "0",
+      "accountNo": "003C000001",
+      "advancedCashT0": "0",
+      "advancedCashT1": "0",
+      "buyT0": "0",
+      "buyT1": "0",
+      "buyT2": "0",
+      "buyUnmatched": "0",
+      "dividend": "0",
+      "holdSubscription": "0",
+      "interestLoan": "0",
+      "onHoldCash": "0",
+      "overdueFeeLoan": "0",
+      "sellT0": "0",
+      "sellT1": "0",
+      "sellT2": "0",
+      "sellUnmatched": "0",
+      "totalDebt": "0",
+      "withdrawable": "0"
+    },
+    "receivedTime": 1795110482505
+  }
+}

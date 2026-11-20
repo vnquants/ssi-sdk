@@ -1,0 +1,12 @@
+{
+  "captured": "2026-11-20 live check (read-only)",
+  "redacted": "account numbers replaced, amounts zeroed",
+  "status": 200,
+  "headers": {},
+  "body": {
+    "accountNo": "003C000001",
+    "orderList": [],
+    "receivedTime": 1795110482626,
+    "totalRecord": 0
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "captured": "2026-11-20 live check (read-only)",
+  "status": 200,
+  "headers": {
+    "X-RATELIMIT-LIMIT": "20",
+    "X-RATELIMIT-REMAINING": "19"
+  },
+  "body": {
+    "code": 200,
+    "data": [
+      {
+        "close": "51100",
+        "high": "51100",
+        "low": "51100",
+        "open": "51100",
+        "symbol": "VNM",
+        "tradingDate": "2026/11/19 14:45:00",
+        "value": "13745900000",
+        "volume": "269000"
+      },
+      {
+        "close": "51200",
+        "high": "51300",
+        "low": "51200",
+        "open": "51200",
+        "symbol": "VNM",
+        "tradingDate": "2026/11/19 14:29:00",
+        "value": "665600000",
+        "volume": "13000"
+      },
+      {
+        "close": "51200",
+        "high": "51200",
+        "low": "51100",
+        "open": "51200",
+        "symbol": "VNM",
+        "tradingDate": "2026/11/19 14:28:00",
+        "value": "312320000",
+        "volume": "6100"
+      },
+      {
+        "close": "51200",
+        "high": "51300",
+        "low": "51100",
+        "open": "51300",
+        "symbol": "VNM",
+        "tradingDate": "2026/11/19 14:27:00",
+        "value": "650240000",
+        "volume": "12700"
+      },
+      {
+        "close": "51300",
+        "high": "51300",
+        "low": "51000",
+        "open": "51100",
+        "symbol": "VNM",
+        "tradingDate": "2026/11/19 14:26:00",
+        "value": "2924100000",
+        "volume": "57000"
+      }
+    ],
+    "msg": "",
+    "pageIndex": 1,
+    "pageSize": 1000
+  },
+  "note": "data trimmed from 226 to 5 rows"
+}

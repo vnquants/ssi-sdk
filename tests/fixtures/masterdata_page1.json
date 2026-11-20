@@ -1,0 +1,98 @@
+{
+  "captured": "2026-11-20 live check (read-only)",
+  "status": 200,
+  "headers": {
+    "X-RATELIMIT-LIMIT": "20",
+    "X-RATELIMIT-REMAINING": "18"
+  },
+  "body": {
+    "code": 200,
+    "data": [
+      {
+        "board": "HNX",
+        "ceiling": 999999999,
+        "floor": 0,
+        "refPrice": 100000,
+        "symbol": "ASSC12601",
+        "tradingDate": "2026/11/19"
+      },
+      {
+        "board": "HNX",
+        "ceiling": 999999999,
+        "floor": 0,
+        "refPrice": 100000,
+        "symbol": "ASSC12602",
+        "tradingDate": "2026/11/19"
+      },
+      {
+        "board": "HNX",
+        "ceiling": 999999999,
+        "floor": 0,
+        "refPrice": 100000,
+        "symbol": "ASSC12603",
+        "tradingDate": "2026/11/19"
+      },
+      {
+        "board": "HNX",
+        "ceiling": 999999999,
+        "floor": 0,
+        "refPrice": 100000,
+        "symbol": "BAB124016",
+        "tradingDate": "2026/11/19"
+      },
+      {
+        "board": "HNX",
+        "ceiling": 999999999,
+        "floor": 0,
+        "refPrice": 100000,
+        "symbol": "BAB124026",
+        "tradingDate": "2026/11/19"
+      },
+      {
+        "board": "HNX",
+        "ceiling": 999999999,
+        "floor": 0,
+        "refPrice": 100000,
+        "symbol": "BAB125022",
+        "tradingDate": "2026/11/19"
+      },
+      {
+        "board": "HNX",
+        "ceiling": 999999999,
+        "floor": 0,
+        "refPrice": 100000,
+        "symbol": "BAB125023",
+        "tradingDate": "2026/11/19"
+      },
+      {
+        "board": "HNX",
+        "ceiling": 999999999,
+        "floor": 0,
+        "refPrice": 100000,
+        "symbol": "BAB126029",
+        "tradingDate": "2026/11/19"
+      },
+      {
+        "board": "HNX",
+        "ceiling": 999999999,
+        "floor": 0,
+        "refPrice": 100000,
+        "symbol": "BAB126030",
+        "tradingDate": "2026/11/19"
+      },
+      {
+        "board": "HNX",
+        "ceiling": 999999999,
+        "floor": 0,
+        "refPrice": 103736315,
+        "symbol": "BAF126003",
+        "tradingDate": "2026/11/19"
+      }
+    ],
+    "itemsCount": 2120,
+    "msg": "",
+    "pageIndex": 1,
+    "pageSize": 10,
+    "pagesCount": 212
+  }
+}

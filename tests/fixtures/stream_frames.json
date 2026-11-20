@@ -1,0 +1,10 @@
+{
+  "captured": "2026-11-20 live check (read-only); market closed, so no data frame was seen",
+  "frames": [
+    "{\"method\":\"SUBSCRIBE\",\"channel\":\"DATA\",\"status\":\"ok\",\"message\":\"Subscribed to 4 topic(s)\"}",
+    "{\"method\":\"subscribe\",\"channel\":\"DATA\",\"status\":\"ok\",\"message\":\"Subscribed to 9 topic(s). Invalid: bogus.VNM\"}",
+    "{\"trading\":\"\",\"data\":\"trade.VNM;quote.VNM;market.flag;market.VNM\"}",
+    "{\"method\":\"ping_pong\",\"channel\":\"HEARTBEAT\",\"status\":\"ok\",\"message\":\"pong\"}",
+    "{\"code\":401,\"msg\":\"Invalid or expired token\"}"
+  ]
+}
