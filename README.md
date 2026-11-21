@@ -132,3 +132,12 @@ SSI_DOTENV=/path/to/.env SSI_OTP=123456 cargo run --features trading --example t
 
 See [`docs/v3-reference.md`](docs/v3-reference.md) for the consolidated SSI FastConnect V3 wire
 protocol reference.
+
+## Development
+
+Enable the pre-commit hook once per clone. It runs rustfmt on staged files, then Clippy and the
+tests, with `--all-features`:
+
+```bash
+git config core.hooksPath .githooks
+```

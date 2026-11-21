@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Pre-commit gate. Enable once per clone: git config core.hooksPath .githooks
+set -euo pipefail
+
+# 1. rustfmt staged .rs files. Fully staged files are formatted and re-staged;
+#    partially staged files are only checked, so unstaged hunks never get committed.
+unformatted=()
+while IFS= read -r -d '' file; do
+  if git diff --quiet -- "$file"; then
+    rustfmt --edition 2024 -- "$file"
+    git add -- "$file"
+  elif ! rustfmt --edition 2024 --check -- "$file" >/dev/null; then
+    unformatted+=("$file")
+  fi
+done < <(git diff --cached --name-only -z --diff-filter=ACMR -- '*.rs')
+
+if ((${#unformatted[@]})); then
+  echo "pre-commit: partially staged files need formatting (run cargo fmt, then stage):" >&2
+  printf '  %s\n' "${unformatted[@]}" >&2
+  exit 1
+fi
+
+# 2. Lints and tests (CI runs the full feature matrix).
+cargo clippy --all-targets --all-features --locked -- -D warnings
+cargo test --all-targets --all-features --locked
